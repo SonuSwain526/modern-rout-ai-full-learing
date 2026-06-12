@@ -34,3 +34,9 @@ pillow>=10.2.0
 ipykernel
 
 nltk
+google-generativeai
+
+
+# langgraph
+langchain-openai
+python-dotenv
