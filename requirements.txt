@@ -32,11 +32,18 @@ python-dotenv
 # --- Utilities ---
 pillow>=10.2.0
 ipykernel
+streamlit
+flask
 
 nltk
 google-generativeai
 
 
 # langgraph
-langchain-openai
-python-dotenv
+langgraph>=0.1.0
+langchain-core>=0.3.0
+langchain-groq>=0.1.0
+langchain-openai>=0.1.0
+langchain-google-genai>=0.1.0
+python-dotenv>=1.0.0
+websockets>=12.0

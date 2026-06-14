@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+audio_env/
+ai_env/
+media_vault/

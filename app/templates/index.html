@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multimodal AI App</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      label { display: block; margin-top: 1rem; }
+      textarea, input, select { width: 100%; padding: 0.5rem; font-size: 1rem; }
+      .result { margin-top: 2rem; padding: 1rem; border: 1px solid #ddd; background: #f9f9f9; }
+    </style>
+  </head>
+  <body>
+    <h1>Multimodal AI App</h1>
+    <form method="post">
+      <label for="target_modality">Target Modality</label>
+      <select id="target_modality" name="target_modality">
+        <option value="text">Text</option>
+        <option value="image">Image</option>
+        <option value="audio">Audio</option>
+        <option value="video">Video</option>
+        <option value="audio_to_text">Audio to Text</option>
+        <option value="image_to_text">Image to Text</option>
+        <option value="video_to_text">Video to Text</option>
+      </select>
+
+      <label for="text_query">Text prompt</label>
+      <textarea id="text_query" name="text_query" rows="6"></textarea>
+
+      <label for="input_path">Input file path</label>
+      <input id="input_path" name="input_path" type="text" />
+
+      <button type="submit" style="margin-top: 1rem; padding: 0.75rem 1.25rem;">Run Workflow</button>
+    </form>
+
+    {% if result %}
+      <div class="result">
+        <h2>Workflow result</h2>
+        <pre>{{ result }}</pre>
+      </div>
+    {% endif %}
+  </body>
+</html>
